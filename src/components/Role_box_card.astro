@@ -1,7 +1,8 @@
 ---
-const { what,  description1, description2, description3, where } = Astro.props;
+const { what,  description1, description2, description3, where, imgSrc } = Astro.props;
 ---
 <div class="grid_1_1">
+ <img src={imgSrc} alt="img">
  <div>
     <h3>{what}</h3>
     <h3>{where}</h3>
@@ -11,5 +12,10 @@ const { what,  description1, description2, description3, where } = Astro.props;
         <li>{description3}</li>
     </ol>
  </div>
- <img src="" alt="">
 </div>
+
+<style>
+    .grid_1_1{
+        color: var(--color-primary);
+    }
+</style>
