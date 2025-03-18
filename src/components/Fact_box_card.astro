@@ -1,7 +1,7 @@
 ---
 const { statistic, role, description, where } = Astro.props;
 ---
-<article>
+<div class="grid_1_1 border">
   <div>
     <h3>{statistic}</h3>
     <p>{role}</p>
@@ -9,13 +9,5 @@ const { statistic, role, description, where } = Astro.props;
   <div>  
     <h3>{where}</h3>
     <p>{description}</p>
-</div>
-</article>
-
-<style>
-article{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-</style>
+  </div>
+</div> 
