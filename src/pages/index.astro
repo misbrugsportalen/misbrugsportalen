@@ -2,6 +2,12 @@
 import "../styles/style.css"
 import FactBox from "../components/Fact_box.astro"
 import FactBoxCard from "../components/Fact_box_card.astro"
+import Header from "../layouts/Header.astro"
+import Footer from "../layouts/Footer.astro"
+import RoleBox from "../components/Role_box.astro"
+import RoleBoxCard from "../components/Role_box_card.astro"
+import Banner from "../components/Banner.astro"
+
 
 ---
 
@@ -18,32 +24,25 @@ import FactBoxCard from "../components/Fact_box_card.astro"
   <!-- Link til dit stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-		  <nav>
-    <p class="logo"><a href="#">LOGO</a></p>
-    <ul>
-      <li><a href="#">Aktiviteter</a></li>
-      <li><a href="#">Vores mission</a></li>
-	   <li><a href="#">Kontakt</a></li>
-    </ul>
-  </nav>
-	<header>
-		<h1>Vil du være en del af noget helt særligt?</h1>
-		<img src="/public/placeholder.png" alt="billede">
-		</header>
+	<Banner></Banner>
+	<Header />
 	<main>
+	<div>
+	 <h1>Vil du være en del af noget helt særligt?</h1>
+	 <img src="/public/placeholder.png" alt="billede">
+	</div>
 	<section>
 		<h2>Bliv en del af Misbrugportalen - Pårørende Netværket hvor vi er et stort team af rådgivere og frivillige, der arbejder for at hjælpe og støtte pårørende til misbrugramte navigere deres hverdag.</h2>
 	</section>
-
 
 <FactBox>
 	<FactBoxCard statistic="254" role="frivillig" where="På tværs af hele danmark..." description="Siden 2013 har vi ydet frivillig telefonrådgivning med samtaler til misbrugsramte og pårørende overalt i Danmark."/>
 	<FactBoxCard statistic="205" role="pårørende" where="Hjulpet bedre på vej i livet" description="Siden 2013 har vi hjulpet mere end 205 pårørende med at finde vej. Med støtte, vejledning og omsorg har vi givet dem redskaberne til at navigere deres situation. "/>
 </FactBox>
 		
+
 	</main>
-	<footer></footer>
+<Footer></Footer>
 </body>
 </html>
