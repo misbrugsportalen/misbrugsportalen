@@ -112,6 +112,21 @@ section {
   align-items: center;
 }
 
+/* Textboxes for DropDown */
+
+.extra-content {
+  display: none; /* Skjul ekstra indhold som standard */
+  background-color: var(--color-primary);
+  padding: 10px;
+  border-radius: 16px;
+  margin-top: 10px;
+  color: var(--color-secondary);
+}
+
+.extra-content.visible {
+  display: block; /* Vis indholdet */
+}
+
 /***** MOBILE *****/
 @media (max-width: 768px) {
   body {
