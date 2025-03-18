@@ -87,6 +87,13 @@ section {
   font-weight: bold;
 }
 
+/* Grids */
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
 /***** MOBILE *****/
 @media (max-width: 768px) {
   body {
