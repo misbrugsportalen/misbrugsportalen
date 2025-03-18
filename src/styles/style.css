@@ -1,0 +1,39 @@
+/****** ROOT VARIABLES ******/
+:root {
+  /* Color */
+  --color-primary: #fcfff4; /* Hvid */
+  --color-secondary: #003832; /* Mørkegrøn */
+  --color-tertiary: #d6eef9; /* Lyseblå */
+  --color-accent: #61c6bb; /* Turkis */
+
+  /*Font*/
+  --font-heading: "Lora", serif;
+  --font-text: "Roboto", sans-serif;
+}
+
+/***** RESET *****/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/***** GENERAL STYLES *****/
+
+/* Typograph */
+h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 400; /* Regular */
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 600; /* Semibold */
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+}
