@@ -71,10 +71,16 @@ p {
   font-size: var(--font-size-xs-desktop);
 }
 
-/* Margins in body */
+/* Styles in Body */
 body {
+  background-color: var(--color-primary);
+}
+
+/* Margins in main */
+main {
   margin-left: var(--spacing-md);
   margin-right: var(--spacing-md);
+  color: var(--color-secondary);
 }
 
 /* Spaces between sections*/
