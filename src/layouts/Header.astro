@@ -6,15 +6,17 @@ const { text } = Astro.props;
 <header>
    <nav class="menu">
         <ul>
-            <li><a href="#aktiviteter">Aktiviteter</a></li>
-            <li><a href="#mission">Vores mission</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
+            
+            <li class="left"><a href="#aktiviteter">Aktiviteter</a></li>
+            <li class="left"><a href="#mission">Vores mission</a></li>
+            <li class="right"><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
 </header>
 
 
 <style>
+
 header {
   top: 0;
   background-color: #FCFFF4;
@@ -27,14 +29,33 @@ header {
 }
 
 .menu {
+  width: 100%;
+}
+
+.menu ul {
   display: flex;
+  width: 100%;
   align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+.left {
+   margin-right: 30px; 
+}
+
+.right {
+  margin-left: auto; 
+}
+
+.menu li {
+  margin-right: 30px;
 }
 
 .menu a {
   display: inline-block;
-  color: black ;
+  color: black;
   text-decoration: none;
-  border-radius: 25px;
 }
 </style>
+
