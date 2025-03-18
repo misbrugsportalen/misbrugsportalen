@@ -9,6 +9,27 @@
   /*Font*/
   --font-heading: "Lora", serif;
   --font-text: "Roboto", sans-serif;
+
+  /* Font sizes desktop*/
+  --font-size-xs-desktop: 1rem;
+  --font-size-sm-desktop: 2rem;
+  --font-size-md-desktop: 2.5rem;
+  --font-size-lg-desktop: 3rem;
+  --font-size-xl-desktop: 4rem;
+
+  /* Font sizes mobile*/
+  --font-size-xs-mobile: 0.875rem;
+  --font-size-sm-mobile: 1.5rem;
+  --font-size-md-mobile: 1.8rem;
+  --font-size-lg-mobile: 2.4rem;
+  --font-size-xl-mobile: 3rem;
+
+  /* Standard sizes */
+  --spacing-xs: 0.5rem; /* Ekstra lille mellemrum */
+  --spacing-sm: 1rem; /* Lille mellemrum */
+  --spacing-md: 2.5rem; /* Mellem mellemrum */
+  --spacing-lg: 3rem; /* Stort mellemrum */
+  --spacing-xl: 4rem; /* Ekstra stort mellemrum */
 }
 
 /***** RESET *****/
@@ -23,17 +44,69 @@
 /* Typograph */
 h1 {
   font-family: var(--font-heading);
-  font-size: 4rem;
+  font-size: var(--font-size-xl-desktop);
   font-weight: 400; /* Regular */
 }
 
 h2 {
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: var(--font-size-lg-desktop);
+  font-weight: 600; /* Semibold */
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md-desktop);
+  font-weight: 500; /* Medium */
+}
+
+h4 {
+  font-family: var(--font-text);
+  font-size: var(--font-size-md-desktop);
   font-weight: 600; /* Semibold */
 }
 
 p {
   font-family: var(--font-text);
-  font-size: 1rem;
+  font-size: var(--font-size-xs-desktop);
+}
+
+/* Margins in body */
+body {
+  margin-left: var(--spacing-md);
+  margin-right: var(--spacing-md);
+}
+
+/* Spaces between sections*/
+section {
+  margin-bottom: var(--spacing-md);
+}
+
+/*Bold text in header*/
+.bold-text {
+  font-weight: bold;
+}
+
+/***** MOBILE *****/
+@media (max-width: 768px) {
+  body {
+    margin-left: var(--spacing-sm);
+    margin-right: var(--spacing-sm);
+  }
+
+  h1 {
+    font-size: var(--font-size-lg-mobile);
+  }
+
+  h2 {
+    font-size: var(--font-size-md-mobile);
+  }
+
+  h3 {
+    font-size: var(--font-size-sm-mobile);
+  }
+
+  h4 {
+    font-size: var(--font-size-md-mobile);
+  }
 }
