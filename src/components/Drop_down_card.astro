@@ -1,0 +1,75 @@
+---
+const { title, description, icon, buttonImg, extraContentId } = Astro.props;
+---
+
+<div class="card">
+  <div class="icon">
+    <img src={icon} alt="Ikon" />
+  </div>
+  <div class="title">
+    <p>{title}</p>
+  </div>
+  <div class="description">
+    <p>{description}</p>
+  </div>
+  <div class="button">
+    <button id={`toggleButton${extraContentId}`} data-target={`extraContent${extraContentId}`}>
+      <img src={buttonImg} alt="Knap" />
+    </button>
+  </div>
+</div>
+
+
+
+<style>
+  .card {
+    display: grid;
+    grid-template-rows: auto;
+    border-radius: 16px;
+    border: 1px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+
+  .icon {
+    grid-row: 1;
+    margin-bottom: 3rem;
+  }
+
+  .title {
+    grid-row: 2;
+   margin-bottom: -0.5rem;
+   margin-top: 1rem;
+  }
+
+  .description {
+    grid-row: 3;
+    margin-top: 1rem;
+  }
+
+  .button {
+    grid-row: 3;
+    justify-self: end;
+  }
+
+  .card button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+  }
+
+  .card button img {
+    transition: opacity 0.3s ease;
+  }
+
+  .card button:hover img {
+    content: url("/public/buttons/dropDownButtonHover.svg");
+  }
+
+</style>
