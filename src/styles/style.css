@@ -51,7 +51,7 @@ h1 {
 h2 {
   font-family: var(--font-heading);
   font-size: var(--font-size-lg-desktop);
-  font-weight: 600; /* Semibold */
+  font-weight: 500; /* Semibold */
 }
 
 h3 {
@@ -73,6 +73,8 @@ p {
 
 /* Margins in body */
 body {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   margin-left: var(--spacing-md);
   margin-right: var(--spacing-md);
 }
@@ -85,6 +87,14 @@ section {
 /*Bold text in header*/
 .bold-text {
   font-weight: bold;
+}
+
+/* Grids */
+
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 /***** MOBILE *****/
