@@ -71,6 +71,11 @@ p {
   font-size: var(--font-size-xs-desktop);
 }
 
+/* Bløde kanter på billeder */
+img {
+  border-radius: 16px;
+}
+
 /* Styles in Body */
 body {
   background-color: var(--color-primary);
