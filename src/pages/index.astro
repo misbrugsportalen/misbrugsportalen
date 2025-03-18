@@ -7,6 +7,10 @@ import Footer from "../layouts/Footer.astro"
 import RoleBox from "../components/Role_box.astro"
 import RoleBoxCard from "../components/Role_box_card.astro"
 import Banner from "../components/Banner.astro"
+import DropDown from "../components/Drop_down.astro"
+import DropDownCard from "../components/Drop_down_card.astro"
+import DropDownButton from "../components/DropDownButton.astro"
+import Tags from "../components/Tags.astro"
 
 
 ---
@@ -35,15 +39,34 @@ import Banner from "../components/Banner.astro"
     <section>
         <h2>Bliv en del af <span class="bold-text">Misbrugportalen - Pårørende Netværket</span> hvor vi er et stort team af rådgivere og frivillige, der arbejder for at hjælpe og støtte pårørende til misbrugramte navigere deres hverdag.</h2>
     </section>
-
+<section>
 <FactBox>
 	<FactBoxCard statistic="254" role="frivillig" where="På tværs af hele danmark..." description="Siden 2013 har vi ydet frivillig telefonrådgivning med samtaler til misbrugsramte og pårørende overalt i Danmark."/>
 	<FactBoxCard statistic="205" role="pårørende" where="Hjulpet bedre på vej i livet" description="Siden 2013 har vi hjulpet mere end 205 pårørende med at finde vej. Med støtte, vejledning og omsorg har vi givet dem redskaberne til at navigere deres situation. "/>
 </FactBox>
+</section>
 
+<section>
+	<DropDown>
+	<DropDownCard/>
+	</DropDown>
+</section>
+
+<section>
 <RoleBox>
     <RoleBoxCard what="Hvad kræver det at blive frivillig?" description1="Kan være med i mindst 6 måneder – vi ønsker stabilitet for dem, vi hjælper." description2="Er god til at tale med mennesker og skabe trygge samtaler." description3="Er ansvarsfuld, nærværende og god til at lytte." imgSrc="public/images/role1.webp" alt="role1" />
 </RoleBox>
+</section>
+
+<section>
+<h2>Krisitna frivillig</h2>
+</section>
+<section>
+	<h2>Formular</h2>
+</section>
+<section>
+	<h2>SoME</h2>
+</section>
 
 	</main>
 <Footer></Footer>
