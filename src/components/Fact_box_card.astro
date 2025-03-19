@@ -1,13 +1,46 @@
 ---
 const { statistic, role, description, where } = Astro.props;
 ---
-<div class="grid_1_1 border">
-  <div>
+<div class="grid_1_1">
+  <div class="vl">
     <h3>{statistic}</h3>
-    <p>{role}</p>
+    <p class="role">{role}</p>
   </div>
-  <div>  
-    <h3>{where}</h3>
+  <div class="padding">  
+    <h4>{where}</h4>
+    <br>
     <p>{description}</p>
   </div>
 </div> 
+
+<style>
+.grid_1_1{
+    padding: 60px;
+    align-items: center;
+}
+
+h3{
+    font-size: 6rem;
+}
+
+.role{
+  font-family: var(--font-heading);
+  font-size: 2rem;
+}
+
+.vl{
+  border-left: 1.5px solid var( --color-secondary);
+  height: 180px;
+  padding: 15px;
+  margin-left: 25px;
+}
+
+.padding{
+    margin-right: 95px;
+}
+
+p{
+  font-size: 1.3rem;
+  line-height: 140%;
+}
+</style>
