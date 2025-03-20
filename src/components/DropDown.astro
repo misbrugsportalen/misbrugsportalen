@@ -1,0 +1,46 @@
+---
+import DropDownCard from "./DropDownCard.astro"
+---
+<section>
+<h2>Sådan arbejder vi for positiv forandring</h2>
+<div class="grid_1-1-1">
+ 	<DropDownCard title="Samtale" description="Samtale forløb med fast rådgiver" icon="icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="1"/>
+    <DropDownCard title="Akuttelefonen" description="Akut rådgivning og vejledning" icon="icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="2"/>
+    <DropDownCard title="Gruppeforløb" description="Støtte og erfaringsudvikling" icon="/public/icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="3"/>
+</div>
+</section>
+
+
+<style>
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tre kolonner */
+    gap: 60px;
+  }
+</style>
+<script>
+  // Hent knappen og tekstboksen
+const toggleButton1 = document.getElementById("toggleButton1");
+const extraContent1 = document.getElementById("extraContent1");
+const toggleButton2 = document.getElementById("toggleButton2");
+const extraContent2 = document.getElementById("extraContent2");
+const toggleButton3 = document.getElementById("toggleButton3");
+const extraContent3 = document.getElementById("extraContent3");
+
+// Når knappen trykkes, toggler vi visningen af tekstboksen
+toggleButton1.addEventListener("click", () => {
+  extraContent1.classList.toggle("visible");
+
+  extraContent2.classList.remove("visible");
+  extraContent3.classList.remove("visible");
+});
+
+toggleButton2.addEventListener("click", () => {
+  extraContent2.classList.toggle("visible");
+});
+
+toggleButton3.addEventListener("click", () => {
+  extraContent3.classList.toggle("visible");
+});
+
+</script>
