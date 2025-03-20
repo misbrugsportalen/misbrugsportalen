@@ -17,7 +17,7 @@
     </section>
 
     <style>
-        .some-section {
+        /* .some-section {
   background-color: #0d3629;
   color: white;
   text-align: center;
@@ -67,5 +67,102 @@ button.next {
   .gallery img {
     width: 200px;
   }
+} */
+
+.some-section {
+    background-color: #0d3629;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
 }
+
+.gallery-container {
+  margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img {
+    /* width: 45%; */
+    height: auto;
+    border-radius: 5px;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button.prev {
+    left: 10px;
+    z-index: 100;
+}
+
+button.next {
+    right: 10px;
+     z-index: 100;
+}
+
+@media (max-width: 600px) {
+    .gallery img {
+        width: 150px;
+    }
+}
+
+@media (min-width: 769px) {
+    .gallery img {
+        width: 45%;
+    }
+}
+
     </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+    const gallery = document.querySelector(".gallery");
+    let currentIndex = 0;
+    const images = gallery.querySelectorAll("img");
+    const totalImages = images.length;
+
+    // Function to move the gallery to the left
+    function moveLeft() {
+        currentIndex = (currentIndex === 0) ? totalImages - 2 : currentIndex - 1;
+        updateGallery();
+    }
+
+    // Function to move the gallery to the right
+    function moveRight() {
+        currentIndex = (currentIndex === totalImages - 2) ? 0 : currentIndex + 1;
+        updateGallery();
+    }
+
+    // Update the gallery's position based on the current index
+    function updateGallery() {
+        const width = window.innerWidth <= 768 ? 100 : 45; // Set width based on screen size
+        gallery.style.transform = `translateX(-${currentIndex * (width + 10)}%)`;
+    }
+
+    // Event listeners for the buttons
+    prevButton.addEventListener("click", moveLeft);
+    nextButton.addEventListener("click", moveRight);
+});
+
+</script>
