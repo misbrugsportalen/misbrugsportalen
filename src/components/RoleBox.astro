@@ -1,0 +1,30 @@
+---
+import Button from "./Button.astro"
+import RoleBoxCard from "./RoleBoxCard.astro"
+---
+<section>
+ <div class="center">
+    <h3>Bliv en del af <span class="bold-text">vores team</span></h3>
+    <br>
+    <p>"Som frivillig hos Misbrugsportalen bliver du en del af et stærkt fællesskab, <br>hvor du kan bruge dine evner til at hjælpe andre."</p>
+    <br><br>
+    <Button text="Tilmeld dig"/>
+ </div>
+    <RoleBoxCard what="Hvad kræver det at blive frivillig?" description1="Kan være med i mindst 6 måneder – vi ønsker stabilitet for dem, vi hjælper." description2="Er god til at tale med mennesker og skabe trygge samtaler." description3="Er ansvarsfuld, nærværende og god til at lytte." imgSrc="public/images/role1.webp" alt="role1" text1="Stabil" text2="Omsorgsfuld" text3="Engageret"/>
+    <RoleBoxCard what="Hvad kan du forvente?" description1="Bliv en del af et varmt fællesskab af dedikerede frivillige og skab meningsfulde forbindelser." description2="Følg den forandring, du skaber, i et givende frivilligjob." description3="Få støtte fra en mentor og erfarne kollegaer hele vejen." imgSrc="public/images/role2.webp" alt="role2" text1="Faglighed" text2="Fællesskab" text3="Gør en reel forskel for andre"/>
+    <RoleBoxCard what="Din rolle som frivillig" description1="Kan være med i mindst 6 måneder – vi ønsker stabilitet for dem, vi hjælper." description2="Vi forventer at du kan bidrage med 3 timer ugentligt til rådgivning og faglig sparring." description3="Vagterne ligger i tidsrummet 15.00 - 21.00 på hverdage, og du planlægger selv dine vagter i vores vagtplan." imgSrc="public/images/role3.webp" alt="role3" text1="3 timer ugentligt" text2="6 måneders forløb" text3="I hele landet"/>
+</section>
+
+<style>
+section{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding-bottom: 30px;
+}
+.center{
+    text-align: center;
+    padding: 70px;
+}
+
+
+</style>
