@@ -5,23 +5,28 @@ import DropDownCard from "./DropDownCard.astro"
 <h2>Sådan arbejder vi for positiv forandring</h2>
 <div class="grid_1-1-1">
  	<DropDownCard title="Samtale" description="Samtale forløb med fast rådgiver" icon="icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="1"/>
-    <DropDownCard title="Akuttelefonen" description="Akut rådgivning og vejledning" icon="icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="2"/>
-    <DropDownCard title="Gruppeforløb" description="Støtte og erfaringsudvikling" icon="/public/icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="3"/>
+    <DropDownCard title="Akuttelefonen" description="Akut rådgivning og vejledning" icon="icons/icon2.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="2"/>
+    <DropDownCard title="Gruppeforløb" description="Støtte og erfaringsudvikling" icon="icons/icon3.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="3"/>
 </div>
  <!-- Tekstboksen der vises når knappen trykkes -->
+
             <div class="extra-content" id="extraContent1">
-              <p>Samtale</p>
+              <p class="bold-text">Samtale</p> <br>
+               <div class="line"></div>
               <p>Et samtaleforløb foregår over telefon og henvender sig både til pårørende og personer, der oplever misbrugsproblematikker.<br><br>I et samtaleforløb får du tilknyttet den samme rådgiver gennem 4-8 samtaler. Dette giver mulighed for at opbygge en tryg relation og gå i dybden med de udfordringer og emner, der er vigtige for netop din situation. Samtaleforløbet sikrer en mere sammenhængende og målrettet støtte, der kan hjælpe dig med at finde nye perspektiver og redskaber til at håndtere din situation.</p>
+              
             </div>
 
             <div class="extra-content" id="extraContent2">
-              <p>Akuttelefonen</p>
+              <p class="bold-text">Akuttelefonen</p><br>
+              <div class="line"></div>
               <p>Akuttelefonens primære funktion er at tilbyde en tryg samtale for dem, der står i en akut svær situation, og som har brug for støtte til at håndtere deres udfordringer. De frivillige hjælper med at afklare behov, tilbyde følelsesmæssig støtte og videregive relevante informationer om næste skridt i forhold til behandling eller yderligere støtte.</p>
             </div>
 
             <div class="extra-content" id="extraContent3">
-              <p>Gruppeforløb</p>
-              <p>Vores gruppeforløb samler pårørende med samme type pårørenderelation til online møder, hvor deltagerne kan dele erfaringer og få støtte fra både gruppeledere og hinanden. Samtalerne faciliteres af vores dygtige og erfarne gruppeledere, som skaber en tryg og støttende ramme for deltagerne. De nuværende grupper henvender sig til følgende pårørende: Forældre, partnere og søskende til misbrugsramte Voksne børn, der er vokset op i en misbrugsramt familie</p>
+              <p class="bold-text">Gruppeforløb</p><br>
+              <div class="line"></div>
+              <p>Vores gruppeforløb samler pårørende med samme type pårørenderelation til online møder, hvor deltagerne kan dele erfaringer og få støtte fra både gruppeledere og hinanden. Samtalerne faciliteres af vores dygtige og erfarne gruppeledere, som skaber en tryg og støttende ramme for deltagerne. De nuværende grupper henvender sig til følgende pårørende: Forældre, partnere og søskende til misbrugsramte Voksne børn, der er vokset op i en misbrugsramt familie</p>         
             </div>
 </section>
 
@@ -31,7 +36,24 @@ import DropDownCard from "./DropDownCard.astro"
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* Tre kolonner */
     gap: 60px;
+    margin-top: var(--spacing-md);
   }
+
+  .extra-content{
+    margin-top: 3rem;
+  }
+
+.line {
+
+  border-top: 1px solid var(--color-secondary);
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.bold-text{
+  margin-bottom: -0.3rem;
+}
+
 </style>
 <script>
   // Hent knappen og tekstboksen
