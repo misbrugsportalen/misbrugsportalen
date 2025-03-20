@@ -13,6 +13,17 @@ const { text } = Astro.props;
     border-radius: 5px;
     font-family: var(--font-text);
     font-size: var(--font-size-xs-desktop);
-    margin-left: 8px;
+  }
+
+  @media (max-width: 768px) {
+    div {
+      padding: 10px;
+      color: var(--color-secondary);
+      background-color: var(--color-tertiary);
+      text-align: center;
+      border-radius: 5px;
+      font-family: var(--font-text);
+      font-size: 0.7rem;
+    }
   }
 </style>
