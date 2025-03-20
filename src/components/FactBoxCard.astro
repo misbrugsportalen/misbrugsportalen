@@ -1,46 +1,88 @@
 ---
 const { statistic, role, description, where } = Astro.props;
 ---
-<div class="grid_1_1">
+
+<div class="grid_1_1 mobile">
   <div class="vl">
     <h3>{statistic}</h3>
     <p class="role">{role}</p>
   </div>
-  <div class="padding">  
+  <div class="padding">
     <h4>{where}</h4>
-    <br>
+    <br />
     <p>{description}</p>
   </div>
-</div> 
+</div>
 
 <style>
-.grid_1_1{
+  .grid_1_1 {
     padding: 60px;
     align-items: center;
-}
+  }
 
-h3{
+  h3 {
     font-size: 6rem;
-}
+  }
 
-.role{
-  font-family: var(--font-heading);
-  font-size: 2rem;
-}
+  .role {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+  }
 
-.vl{
-  border-left: 1.5px solid var( --color-secondary);
-  height: 180px;
-  padding: 15px;
-  margin-left: 25px;
-}
+  .vl {
+    border-left: 1.5px solid var(--color-secondary);
+    height: 180px;
+    padding: 15px;
+    margin-left: 25px;
+  }
 
-.padding{
+  .padding {
     margin-right: 95px;
-}
+  }
 
-p{
-  font-size: 1.3rem;
-  line-height: 140%;
-}
+  p {
+    font-size: 1.3rem;
+    line-height: 140%;
+  }
+
+  @media (max-width: 768px) {
+    .grid_1_1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: flex-start;
+      gap: 10px;
+      padding: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 140%;
+    }
+
+    h3 {
+      font-size: 3rem;
+    }
+
+    .role {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+    }
+
+    .vl {
+      border-left: 1px solid var(--color-secondary);
+      height: 120px;
+      padding: 5px;
+      margin-left: 0;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .padding {
+      margin-right: 0;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
 </style>
