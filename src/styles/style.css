@@ -19,10 +19,10 @@
 
   /* Font sizes mobile*/
   --font-size-xs-mobile: 0.875rem;
-  --font-size-sm-mobile: 1.5rem;
-  --font-size-md-mobile: 1.8rem;
-  --font-size-lg-mobile: 2.4rem;
-  --font-size-xl-mobile: 3rem;
+  --font-size-sm-mobile: 1rem;
+  --font-size-md-mobile: 1.2rem;
+  --font-size-lg-mobile: 1.8rem;
+  --font-size-xl-mobile: 2.4rem;
 
   /* Standard sizes */
   --spacing-xs: 0.5rem; /* Ekstra lille mellemrum */
@@ -51,7 +51,7 @@ h1 {
 h2 {
   font-family: var(--font-heading);
   font-size: var(--font-size-lg-desktop);
-  font-weight: 600; /* Semibold */
+  font-weight: 500; /* Semibold */
 }
 
 h3 {
@@ -69,7 +69,6 @@ h4 {
 p {
   font-family: var(--font-text);
   font-size: var(--font-size-xs-desktop);
-  max-width: 80ch;
   line-height: 1.5;
 }
 
@@ -100,20 +99,6 @@ section {
   font-weight: bold;
 }
 
-/* Grids */
-.grid_1_1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.grid1_1_1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; /* Placerer indholdet nederst */
-  align-items: center;
-}
-
 /* Textboxes for DropDown */
 
 .extra-content {
@@ -129,11 +114,39 @@ section {
   display: block; /* Vis indholdet */
 }
 
+/***** DESKTOP *****/
+
+@media (min-width: 1024px) {
+  /* Grids */
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .grid1_1_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Placerer indholdet nederst */
+    align-items: center;
+  }
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tre kolonner */
+    gap: 80px;
+    margin-top: var(--spacing-md);
+  }
+}
+
 /***** MOBILE *****/
 @media (max-width: 768px) {
   body {
-    margin-left: var(--spacing-sm);
-    margin-right: var(--spacing-sm);
+    margin-left: var(--spacing-xs);
+    margin-right: var(--spacing-xs);
+  }
+
+  section {
+    margin-bottom: var(--spacing-md);
   }
 
   h1 {
