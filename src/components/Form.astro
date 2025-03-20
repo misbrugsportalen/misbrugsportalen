@@ -6,8 +6,8 @@ import Button from "./Button.astro"
 <section class="form-section">
         <h2>Bliv en del af vores fællesskab i dag</h2>
         <div class="form-container">
-            <h3><strong>Udfyld formular</strong></h3>
-            <p>og bliv kontaktet af os</p>
+            <h3>Udfyld formular</h3>
+            <p>Skriv et par få ord om dig selv og bliv kontaktet af os</p>
             <form>
                 <label for="name">Navn</label>
                 <input type="text" id="name" placeholder="Skriv dit fulde navn" required>
@@ -26,9 +26,11 @@ import Button from "./Button.astro"
                     placeholder="Har du tidligere arbejdet med misbrugs-behandling? Hvis ja, beskriv kort din erfaring"></textarea>
 
                 <div class="terms">
+               
                     <input type="checkbox" id="terms" required>
                     <label for="terms">Jeg accepterer alle <a href="#">Termer</a></label>
-                </div>
+               
+                  </div>
 
           <Button text="Insend" />
                 <!-- <button type="submit">INDSEND</button> -->
@@ -39,39 +41,97 @@ import Button from "./Button.astro"
     <style>
         .form-section {
   text-align: center;
-  padding: 40px;
+  padding: 50px;
 }
 .form-container {
+  margin-top: 1rem;
   background-color: #d9eaf7;
   padding: 20px;
   border-radius: 8px;
-  max-width: 500px;
+  max-width: 800px;
   margin: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 form {
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 label {
+  padding-top: 0.8rem;
+ font-family: var(--font-text);
   font-weight: bold;
   text-align: left;
 }
 input,
 textarea {
+  font-size: var(--font-size-xs-desktop);
+   font-family: var(--font-text);
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 .terms {
   display: flex;
   align-items: center;
+  gap: 8px; /* Controls spacing between checkbox and text */
+}
+
+.terms input {
+  width: 16px; /* Adjust checkbox size */
+  height: 16px;
+  cursor: pointer;
+}
+
+.terms label {
+  font-family: var(--font-text);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.terms a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* .terms {
+  display: flex;
+  align-items: center;
+
 }
 .terms input {
+   font-family: var(--font-text);
   margin-right: 10px;
-}
+} */
+
+  /* Mobile Optimization */
+    @media (max-width: 768px) {
+        .form-container {
+           max-width: 100%;
+            padding: 15px; 
+            border-radius: 0; /* Remove rounded corners for a clean look */
+        }
+
+        .form-section {
+            padding: 30px 15px; /* Reduce padding */
+        }
+
+        input,
+        textarea {
+            font-size: var(--font-size-xs-mobile); /* Adjust font size for mobile */
+            padding: 8px; /* Reduce padding for better spacing */
+        }
+
+        label {
+            font-size: var(--font-size-sm); /* Adjust label font size */
+        }
+    }
+
 
 
     </style>
