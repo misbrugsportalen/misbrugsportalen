@@ -1,5 +1,7 @@
 ---
 import "../styles/style.css"
+
+import Hero from "../components/Hero.astro"
 import FactBox from "../components/Fact_box.astro"
 import FactBoxCard from "../components/Fact_box_card.astro"
 import Header from "../layouts/Header.astro"
@@ -7,8 +9,8 @@ import Footer from "../layouts/Footer.astro"
 import RoleBox from "../components/Role_box.astro"
 import RoleBoxCard from "../components/Role_box_card.astro"
 import Banner from "../components/Banner.astro"
-import DropDown from "../components/Drop_down.astro"
-import DropDownCard from "../components/Drop_down_card.astro"
+import DropDown from "../components/DropDown.astro"
+import DropDownCard from "../components/DropDownCard.astro"
 import DropDownButton from "../components/DropDownButton.astro"
 
 
@@ -31,6 +33,7 @@ import DropDownButton from "../components/DropDownButton.astro"
 	<Banner></Banner>
 	<Header />
 	<main>
+    <Hero/>
 	   <section class="grid1_1_1">
              <h1>Vil du være en del af <span class="bold-text">noget helt særligt</span>?</h1>
      <img src="/public/images/hero.webp" alt="billede">
@@ -45,12 +48,8 @@ import DropDownButton from "../components/DropDownButton.astro"
 </FactBox>
 </section>
 
-<section>
-	<DropDown>
-		<DropDownCard title="Samtale" description="Samtale forløb med fast rådgiver" icon="/public/icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="1"/>
-    <DropDownCard title="Akuttelefonen" description="Akut rådgivning og vejledning" icon="/public/icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="2"/>
-    <DropDownCard title="Gruppeforløb" description="Støtte og erfaringsudvikling" icon="/public/icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="3"/>
-	</DropDown>
+	<DropDown/>
+	
 
  <!-- Tekstboksen der vises når knappen trykkes -->
             <div class="extra-content" id="extraContent1">
@@ -67,7 +66,7 @@ import DropDownButton from "../components/DropDownButton.astro"
               <p>Gruppeforløb</p>
               <p>Vores gruppeforløb samler pårørende med samme type pårørenderelation til online møder, hvor deltagerne kan dele erfaringer og få støtte fra både gruppeledere og hinanden. Samtalerne faciliteres af vores dygtige og erfarne gruppeledere, som skaber en tryg og støttende ramme for deltagerne. De nuværende grupper henvender sig til følgende pårørende: Forældre, partnere og søskende til misbrugsramte Voksne børn, der er vokset op i en misbrugsramt familie</p>
             </div>
-</section>
+
 
 <section>
 <RoleBox>
@@ -90,7 +89,7 @@ import DropDownButton from "../components/DropDownButton.astro"
 	</main>
 <Footer></Footer>
 
-<script type="module" src="/src/scripts/dropdowncard.js"></script>
+<script type="module" src="../scripts/dropdowncard.js"></script>
 
 
 
