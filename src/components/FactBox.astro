@@ -1,0 +1,22 @@
+---
+import FactBoxCard from "./FactBoxCard.astro"
+---
+
+<section>
+ <h2>Så mange er vi...</h2>
+	<FactBoxCard statistic="254" role="frivillige" where="På tværs af hele danmark" description="Siden 2013 har vi ydet frivillig telefonrådgivning med samtaler til misbrugsramte og pårørende overalt i Danmark."/>
+	<FactBoxCard statistic="205" role="pårørende" where="Hjulpet bedre på vej i livet" description="Siden 2013 har vi hjulpet mere end 205 pårørende med at finde vej. Med støtte, vejledning og omsorg har vi givet dem redskaberne til at navigere deres situation. "/>
+</section>
+
+<style>
+section{
+  border: var(--color-secondary) solid;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+h2{
+  padding-top: 25px;
+  text-align: center;
+}
+</style>
