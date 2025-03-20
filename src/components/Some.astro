@@ -1,5 +1,72 @@
 ---
 ---
-<section>
-	<h2>SoME</h2>
-</section>
+
+    <section class="some-section">
+
+        <h3><strong>Følg med</strong> i hvad vi laver på SoMe</h3>
+        <div class="gallery-container">
+            <button class="prev">&#10094;</button>
+            <div class="gallery">
+                <img src="public/images/someimage1.webp" alt="Billede 1">
+                <img src="public/images/someimage2.webp" alt="Billede 2">
+                <img src="public/images/someimage3.webp" alt="Billede 3">
+                <img src="public/images/someimage5.webp" alt="Billede 4">
+
+            </div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+	<style>
+		.some-section {
+  background-color: #0d3629;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery img {
+  width: 45%;
+  height: auto;
+  border-radius: 5px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+@media (min-width: 768px) {
+  .gallery img {
+    width: 200px;
+  }
+}
+	</style>
