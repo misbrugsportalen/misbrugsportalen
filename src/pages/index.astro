@@ -1,18 +1,18 @@
 ---
 import "../styles/style.css"
 
+import Banner from "../components/Banner.astro"
+import Header from "../layouts/Header.astro"
 import Hero from "../components/Hero.astro"
 import FactBox from "../components/FactBox.astro"
 import FactBoxCard from "../components/FactBoxCard.astro"
-import Header from "../layouts/Header.astro"
-import Footer from "../layouts/Footer.astro"
-import RoleBox from "../components/RoleBox.astro"
-import RoleBoxCard from "../components/RoleBoxCard.astro"
-import Banner from "../components/Banner.astro"
 import DropDown from "../components/DropDown.astro"
 import DropDownCard from "../components/DropDownCard.astro"
-import DropDownButton from "../components/DropDownButton.astro"
+import RoleBox from "../components/RoleBox.astro"
+import RoleBoxCard from "../components/RoleBoxCard.astro"
 import Form from "../components/Form.astro"
+import Volunteer from "../components/Volunteer.astro"
+import Footer from "../layouts/Footer.astro"
 
 
 ---
@@ -35,59 +35,13 @@ import Form from "../components/Form.astro"
 	<Header />
 	<main>
     <Hero/>
-<section>
-<FactBox>
-	<FactBoxCard statistic="254" role="frivillige" where="På tværs af hele danmark" description="Siden 2013 har vi ydet frivillig telefonrådgivning med samtaler til misbrugsramte og pårørende overalt i Danmark."/>
-	<FactBoxCard statistic="205" role="pårørende" where="Hjulpet bedre på vej i livet" description="Siden 2013 har vi hjulpet mere end 205 pårørende med at finde vej. Med støtte, vejledning og omsorg har vi givet dem redskaberne til at navigere deres situation. "/>
-</FactBox>
-</section>
-
-	<DropDown/>
-	
-
- <!-- Tekstboksen der vises når knappen trykkes -->
-            <div class="extra-content" id="extraContent1">
-              <p>Samtale</p>
-              <p>Et samtaleforløb foregår over telefon og henvender sig både til pårørende og personer, der oplever misbrugsproblematikker.<br><br>I et samtaleforløb får du tilknyttet den samme rådgiver gennem 4-8 samtaler. Dette giver mulighed for at opbygge en tryg relation og gå i dybden med de udfordringer og emner, der er vigtige for netop din situation. Samtaleforløbet sikrer en mere sammenhængende og målrettet støtte, der kan hjælpe dig med at finde nye perspektiver og redskaber til at håndtere din situation.</p>
-            </div>
-
-            <div class="extra-content" id="extraContent2">
-              <p>Akuttelefonen</p>
-              <p>Akuttelefonens primære funktion er at tilbyde en tryg samtale for dem, der står i en akut svær situation, og som har brug for støtte til at håndtere deres udfordringer. De frivillige hjælper med at afklare behov, tilbyde følelsesmæssig støtte og videregive relevante informationer om næste skridt i forhold til behandling eller yderligere støtte.</p>
-            </div>
-
-            <div class="extra-content" id="extraContent3">
-              <p>Gruppeforløb</p>
-              <p>Vores gruppeforløb samler pårørende med samme type pårørenderelation til online møder, hvor deltagerne kan dele erfaringer og få støtte fra både gruppeledere og hinanden. Samtalerne faciliteres af vores dygtige og erfarne gruppeledere, som skaber en tryg og støttende ramme for deltagerne. De nuværende grupper henvender sig til følgende pårørende: Forældre, partnere og søskende til misbrugsramte Voksne børn, der er vokset op i en misbrugsramt familie</p>
-            </div>
-
-
-<section>
-<RoleBox>
-    <RoleBoxCard what="Hvad kræver det at blive frivillig?" description1="Kan være med i mindst 6 måneder – vi ønsker stabilitet for dem, vi hjælper." description2="Er god til at tale med mennesker og skabe trygge samtaler." description3="Er ansvarsfuld, nærværende og god til at lytte." imgSrc="public/images/role1.webp" alt="role1" text1="Stabil" text2="Omsorgsfuld" text3="Engageret"/>
-    <RoleBoxCard what="Hvad kan du forvente?" description1="Bliv en del af et varmt fællesskab af dedikerede frivillige og skab meningsfulde forbindelser." description2="Følg den forandring, du skaber, i et givende frivilligjob." description3="Få støtte fra en mentor og erfarne kollegaer hele vejen." imgSrc="public/images/role2.webp" alt="role2" text1="Faglighed" text2="Fællesskab" text3="Gør en reel forskel for andre"/>
-    <RoleBoxCard what="Din rolle som frivillig" description1="Kan være med i mindst 6 måneder – vi ønsker stabilitet for dem, vi hjælper." description2="Vi forventer at du kan bidrage med 3 timer ugentligt til rådgivning og faglig sparring." description3="Vagterne ligger i tidsrummet 15.00 - 21.00 på hverdage, og du planlægger selv dine vagter i vores vagtplan." imgSrc="public/images/role3.webp" alt="role3" text1="3 timer ugentligt" text2="6 måneders forløb" text3="I hele landet"/>
-</RoleBox>
-</section>
-
-<section>
-<h2>Krisitna frivillig</h2>
-</section>
-<section>
-	<h2>Formular</h2>
-</section>
-<section>
-	<h2>SoME</h2>
-</section>
-
-<Form/>
-
-	</main>
-<Footer></Footer>
-
-<script type="module" src="../scripts/dropdowncard.js"></script>
-
-
+    <FactBox/>
+    <DropDown/>
+    <RoleBox/>
+    <Volunteer/>
+    <Form/>
+  </main>
+  <Footer/>
 
 </body>
 </html>

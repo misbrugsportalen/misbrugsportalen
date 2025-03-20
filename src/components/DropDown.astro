@@ -8,6 +8,21 @@ import DropDownCard from "./DropDownCard.astro"
     <DropDownCard title="Akuttelefonen" description="Akut rådgivning og vejledning" icon="icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="2"/>
     <DropDownCard title="Gruppeforløb" description="Støtte og erfaringsudvikling" icon="/public/icons/icon1.svg" buttonImg="/public/buttons/dropDown.svg" extraContentId="3"/>
 </div>
+ <!-- Tekstboksen der vises når knappen trykkes -->
+            <div class="extra-content" id="extraContent1">
+              <p>Samtale</p>
+              <p>Et samtaleforløb foregår over telefon og henvender sig både til pårørende og personer, der oplever misbrugsproblematikker.<br><br>I et samtaleforløb får du tilknyttet den samme rådgiver gennem 4-8 samtaler. Dette giver mulighed for at opbygge en tryg relation og gå i dybden med de udfordringer og emner, der er vigtige for netop din situation. Samtaleforløbet sikrer en mere sammenhængende og målrettet støtte, der kan hjælpe dig med at finde nye perspektiver og redskaber til at håndtere din situation.</p>
+            </div>
+
+            <div class="extra-content" id="extraContent2">
+              <p>Akuttelefonen</p>
+              <p>Akuttelefonens primære funktion er at tilbyde en tryg samtale for dem, der står i en akut svær situation, og som har brug for støtte til at håndtere deres udfordringer. De frivillige hjælper med at afklare behov, tilbyde følelsesmæssig støtte og videregive relevante informationer om næste skridt i forhold til behandling eller yderligere støtte.</p>
+            </div>
+
+            <div class="extra-content" id="extraContent3">
+              <p>Gruppeforløb</p>
+              <p>Vores gruppeforløb samler pårørende med samme type pårørenderelation til online møder, hvor deltagerne kan dele erfaringer og få støtte fra både gruppeledere og hinanden. Samtalerne faciliteres af vores dygtige og erfarne gruppeledere, som skaber en tryg og støttende ramme for deltagerne. De nuværende grupper henvender sig til følgende pårørende: Forældre, partnere og søskende til misbrugsramte Voksne børn, der er vokset op i en misbrugsramt familie</p>
+            </div>
 </section>
 
 
@@ -37,10 +52,16 @@ toggleButton1.addEventListener("click", () => {
 
 toggleButton2.addEventListener("click", () => {
   extraContent2.classList.toggle("visible");
+
+  extraContent1.classList.remove("visible");
+  extraContent3.classList.remove("visible");
 });
 
 toggleButton3.addEventListener("click", () => {
   extraContent3.classList.toggle("visible");
+
+  extraContent1.classList.remove("visible");
+  extraContent2.classList.remove("visible");
 });
 
 </script>
