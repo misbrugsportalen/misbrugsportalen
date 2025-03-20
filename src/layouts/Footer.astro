@@ -32,9 +32,9 @@
         </div>
     </div> 
 
-<br>
-<hr>
-<br>
+    <br>
+    <hr>
+    <br>
 
         <div class="footer-bottom">
           <a href="#">Privacy Policy</a>
@@ -55,7 +55,6 @@ justify-items: flex-start;
 gap: 40px; 
 padding-bottom: 20px;
 }
-
 
  footer {
   padding: 2rem 4rem;
@@ -132,5 +131,43 @@ li {
 
 }
 
+  @media (max-width: 768px) {
+      
+   li, a {
+    font-family: font-family: var(--font-text); 
+    font-size: small;
+    }
+
+    .indhold{
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+
+    .span{
+    grid-column: 1/2;
+    }
+
+    .footer-bottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    font-size: 6px;
+    opacity: 0.7;
+    }
+
+    .flex {
+     display: grid;
+    grid-template-columns: 1fr;
+
+    }
+   
+
+.titler {
+    margin-left: 0rem;
+    font-weight: bold;
+    gap: 2px;
+}
+
+}
 </style>
 
