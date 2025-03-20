@@ -11,7 +11,7 @@
   --font-text: "Roboto", sans-serif;
 
   /* Font sizes desktop*/
-  --font-size-xs-desktop: 1rem;
+  --font-size-xs-desktop: 1.2rem;
   --font-size-sm-desktop: 2rem;
   --font-size-md-desktop: 2.5rem;
   --font-size-lg-desktop: 3rem;
@@ -29,7 +29,7 @@
   --spacing-sm: 1rem; /* Lille mellemrum */
   --spacing-md: 2.5rem; /* Mellem mellemrum */
   --spacing-lg: 3rem; /* Stort mellemrum */
-  --spacing-xl: 4rem; /* Ekstra stort mellemrum */
+  --spacing-xl: 10rem; /* Ekstra stort mellemrum */
 }
 
 /***** RESET *****/
@@ -69,6 +69,8 @@ h4 {
 p {
   font-family: var(--font-text);
   font-size: var(--font-size-xs-desktop);
+  max-width: 80ch;
+  line-height: 1.5;
 }
 
 /* Bløde kanter på billeder */
@@ -90,7 +92,7 @@ main {
 
 /* Spaces between sections*/
 section {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
 }
 
 /*Bold text in header*/
